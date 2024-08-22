@@ -6,7 +6,7 @@
       ansible.builtin.debug:
         msg: "This is a test"
     - name: Update Inventory
-      awx.awx.host:
+      ansible.controller.host:
         name: test.jlmayorga.xyz
         description: "Test Host"
         inventory: "{{ lookup('ansible.builtin.env', 'INVENTORY_ID', default='HomeLab') }}"
