@@ -36,15 +36,12 @@ To run the playbook using standalone Ansible:
 
 2. Install the required collection:
    
-   If you have an AAP subscription:
-   ```
-   # Download the ansible.controller collection from the Red Hat [Content Hub](https://console.redhat.com/ansible/automation-hub/repo/published/ansible/controller/)
-   ```
+   - If you have an AAP subscription:Download the ansible.controller collection from the Red Hat [Content Hub](https://console.redhat.com/ansible/automation-hub/repo/published/ansible/controller/)
 
-   If you're using the AWX alternative:
-   ```
-   ansible-galaxy collection install awx.awx
-   ```
+   - If you're using the AWX alternative:
+        ```
+        ansible-galaxy collection install awx.awx
+        ```
 
 3. Set up your AAP credentials using environment variables:
 
