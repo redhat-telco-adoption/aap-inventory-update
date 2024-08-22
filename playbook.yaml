@@ -1,10 +1,14 @@
 ---
 - name: AAP Inventory Update
-  hosts: all
+  hosts: localhost
   tasks:
     - name: Debug
       ansible.builtin.debug:
         msg: "This is a test"
-    - name: Pause for 5 minutes
-      ansible.builtin.pause:
-        minutes: 10
+    - name: Update Inventory
+      awx.awx.host:
+        name: test.jlmayorga.xyz
+        description: "Test Host"
+        inventory: "{{ lookup('ansible.builtin.env', 'INVENTORY_ID', default='HomeLab') }}"
+        enabled: false
+        state: present
