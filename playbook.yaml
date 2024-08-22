@@ -1,0 +1,7 @@
+---
+- name: AAP Inventory Update
+  hosts: all
+  tasks:
+    - name: Debug
+      ansible.builtin.debug:
+        msg: "This is a test"
